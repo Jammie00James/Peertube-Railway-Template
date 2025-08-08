@@ -1,4 +1,4 @@
-FROM chocobozzz/peertube:production
+FROM chocobozzz/peertube:production-bookworm
 
 ENV NODE_ENV=production
 WORKDIR /app
