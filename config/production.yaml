@@ -1,0 +1,33 @@
+webserver:
+  hostname: ${PEERTUBE_WEBSERVER_HOSTNAME}
+  port: 80
+  https: true
+
+secrets:
+  peertube: ${PEERTUBE_SECRET}
+
+database:
+  hostname: ${PEERTUBE_DB_HOST}
+  port: ${PEERTUBE_DB_PORT}
+  username: ${PEERTUBE_DB_USERNAME}
+  password: ${PEERTUBE_DB_PASSWORD}
+  database: ${PEERTUBE_DB_NAME}
+
+redis:
+  hostname: ${PEERTUBE_REDIS_HOST}
+  port: ${PEERTUBE_REDIS_PORT}
+
+smtp:
+  hostname: ${PEERTUBE_SMTP_HOST}
+  port: ${PEERTUBE_SMTP_PORT}
+  username: ${PEERTUBE_SMTP_USERNAME}
+  password: ${PEERTUBE_SMTP_PASSWORD}
+  from_address: ${PEERTUBE_SMTP_FROM}
+
+object_storage:
+  enabled: true
+  provider: s3
+  endpoint: https://${AWS_REGION}.amazonaws.com
+  bucket_name: ${AWS_S3_BUCKET}
+  access_key_id: ${AWS_ACCESS_KEY_ID}
+  secret_access_key: ${AWS_SECRET_ACCESS_KEY}

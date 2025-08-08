@@ -1,0 +1,34 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "name": "PeerTube",
+  "plugins": [
+    {
+      "name": "PostgreSQL",
+      "type": "postgresql"
+    },
+    {
+      "name": "Redis",
+      "type": "redis"
+    }
+  ],
+  "env": {
+    "PEERTUBE_DB_HOST": { "fromPlugin": "PostgreSQL", "key": "HOST" },
+    "PEERTUBE_DB_PORT": { "fromPlugin": "PostgreSQL", "key": "PORT" },
+    "PEERTUBE_DB_USERNAME": { "fromPlugin": "PostgreSQL", "key": "USER" },
+    "PEERTUBE_DB_PASSWORD": { "fromPlugin": "PostgreSQL", "key": "PASSWORD" },
+    "PEERTUBE_DB_NAME": { "fromPlugin": "PostgreSQL", "key": "DATABASE" },
+    "PEERTUBE_REDIS_HOST": { "fromPlugin": "Redis", "key": "HOST" },
+    "PEERTUBE_REDIS_PORT": { "fromPlugin": "Redis", "key": "PORT" },
+    "PEERTUBE_WEBSERVER_HOSTNAME": { "description": "Your custom domain" },
+    "PEERTUBE_SECRET": { "description": "Random secret string" },
+    "PEERTUBE_SMTP_HOST": { "description": "SMTP host" },
+    "PEERTUBE_SMTP_PORT": { "description": "SMTP port" },
+    "PEERTUBE_SMTP_USERNAME": { "description": "SMTP user" },
+    "PEERTUBE_SMTP_PASSWORD": { "description": "SMTP password" },
+    "PEERTUBE_SMTP_FROM": { "description": "From email" },
+    "AWS_ACCESS_KEY_ID": { "description": "S3 key" },
+    "AWS_SECRET_ACCESS_KEY": { "description": "S3 secret" },
+    "AWS_REGION": { "description": "S3 region" },
+    "AWS_S3_BUCKET": { "description": "S3 bucket name" }
+  }
+}
